@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Поливцев Артём</title>
+</head>
+
+<body>
+<h1>Работа Поливцева Артёма</h1>
+<ul>
+    <li>
+        <a href="http://kubsu.ru">Сайт КубГУ</a>
+    </li>
+    <li>
+        <a href="https://kubsu.ru/index.php">Сайт КубГУ</a>
+    </li>
+    <li>
+        <a href="https://kubsu.ru">
+        <img alt="Красивая машина" src="beautyCar.jpg"/>
+        </a>
+    </li>
+    <li>
+        <a href="Package/seconPage.html">Сокращённая ссылка на вторую страницу</a>
+    </li>
+    <li>
+        <a href="mainPage.html">Сокращённая сслыка на главную страницу</a>
+    </li>
+    <li>
+        <a href="#forma">Сслыка на фрагмент текущей страницы (на форму) </a>
+    </li>
+    <li>
+        <a href="http://kubsu.ru/ru/taxonomy/term/49?page=10&categoty=post">Ссылка с тремя параметрами</a>
+    </li>
+    <li>
+        <a href="https://www.kubsu.ru/ru/taxonomy/term/49?id=#zone-footer-wrapper">Ссылка с параметром id</a>
+    </li>
+    <li>
+        <a href="./mainPage.html">Относительная ссылка на страницу в даннм пакете</a>
+    </li>
+    <li>
+        <a href="./Package/seconPage.html">Относительная ссылка на страницу в следующем пакете</a>
+    </li>
+    <li>
+        <a href="./Package/Package2/thiraPage.html">Относительная ссылка на страницу в пакете на 2 пакета выше</a>
+    </li>
+    <li>
+        <p>Пример использования <a href="http://kubsu.ru">ссылки</a> посреди текста</p>
+    </li>
+    <li>
+        <a href="https://swiftbook.org/courses/415/show_promo/#">Ссылка на фрагмент сайта swiftbook</a>
+    </li>
+    <li>
+        <map name="rectangle">
+            <area shape="rect" coords="70, 70, 700, 380" href="https://www.kubsu.ru/ru/university/library" alt="Сайт КубГУ, прямоугольник">
+            <area shape="circle" coords="360, 750, 220" href="https://kubsu.ru" alt="Сайт КубГУ, круг">
+        </map>
+        <img src="figuri.jpg" usemap="#rectangle" alt="Картинка с фигурками"/>
+    </li>
+    <li>
+        <a href>пустая ссылка</a>
+    </li>
+    <li class>
+        <a>Ссылка без href</a>
+    </li>
+    <li>
+        <a href="http://kubsu.ru" rel="nofollow">Запрещённая ссылка для поиска</a>
+    </li>
+    <li>
+        <a href="http://kubsu.ru" rel="noindex">Запрещённая ссылка для индексации</a>
+    </li>
+    <ol>
+       <li>
+          <a href="http://kubsu.ru">Это</a>
+       </li>
+       <li>
+          <a href="https://kubsu.ru">Сайт</a>
+       </li>
+       <li>
+          <a href="http://kubsu.ru">Университета</a>
+       </li>
+    </ol>
+    <li>
+    <a href="ftp://user:12345@ftp.sponge.ru">Ссылка на FTP с авторизацией</a>
+    </li>
+</ul>
+
+<h2>Форма для заполнения</h2>
+<form method="post" action="/" id="forma">
+    <label>ФИО</label>
+    <br>
+    <input type="text" name="fieldNameSurname" required>
+    <br>
+    <label>Телефон</label>
+    <br>
+    <input type="tel" name="fieldTelephoneNumber" required>
+    <br>
+    <label>Email</label>
+    <br>
+    <input type="email" name="fieldEmail" required>
+    <br>
+    <label>День рождения</label>
+    <br>
+    <input type="date" name="fieldDOB" required>
+    <br>
+    <label>Ваш пол</label>
+    <br>
+    <label>
+        <input type="radio" name="fieldGender" value="Мужской" checked="checked">Мужской
+    </label>
+    <label>
+        <input type="radio" name="fieldGender" value="Женский">Женский
+    </label>
+    <br>
+    <label>Ваш любимый язык программирования</label>
+    <br>
+    <select multiple="multiple" name="fielpFavotitePL" required>
+        <option value="Pascal">Pascal</option>
+        <option value="Python">Python</option>
+        <option value="C">C</option>
+        <option value="C++">C++</option>
+        <option value="Java">Java</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="PHP">PHP</option>
+        <option value="Haskel">Haskel</option>
+        <option value="Clojure">Clojure</option>
+        <option value="Prolog">Prolog</option>
+        <option value="Scala">Scala</option>
+    </select>
+    <br>
+    <label>Биография</label>
+    <br>
+    <textarea name="fieldBiography" required></textarea>
+    <br>
+    <input type="checkbox" name="checkBoxAgree" required>С контрактом ознакомлен(а)
+    <br>
+    <input type="submit" value="Отправить" required>
+</form>
+</body>
+</html>
