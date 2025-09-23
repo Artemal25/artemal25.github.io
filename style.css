@@ -1,0 +1,146 @@
+body{
+    background-color: rgb(50, 90, 100);
+    margin: 0;
+    padding: 0;
+}
+
+
+header{
+    background-color: rgb(50, 50, 100);
+
+    font-family: "Montserrat", sans-serif;
+    color: aliceblue;
+}
+
+main{
+    background-color: rgb(50, 50, 100);
+    width: 960px;
+    margin: auto;
+    margin-top: 130px;
+    text-align: center;
+}
+
+.table_main_div table{
+    margin: auto;
+    wigth: 100%;
+}
+
+footer{
+    width: 100%;
+    background-color: rgb(50, 50, 100);
+    padding-top: 30px;
+    padding-bottom: 70px;
+    margin-top: 130px;
+}
+
+
+
+/*=================================================== HEADER =================================================== */
+
+.logo{
+    float: left;
+    width: auto;
+    height: auto;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.text_header_logo a{
+    text-decoration: none;
+    color: aliceblue;
+    margin-left: 10px;
+}
+
+isplay: block;
+} */
+
+.nav_header{
+    padding-top: 15px;
+    text-align: center;
+}
+
+.nav_header a{
+    margin-left: 20px;
+
+    color: aliceblue;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+}
+.nav_header a:hover{
+    color: orange;
+}
+
+/*===================================================  LINK =================================================== */
+
+
+
+.link_list_title{
+
+    color: aliceblue;
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+}
+
+#link_list_title{
+
+    color: aliceblue;
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+}
+
+
+.link_list_div{
+    list-style-position: inside;
+}
+
+.link_list_div li{
+    margin-top: 5px;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    color: aliceblue;
+    font-size: 25px;
+}
+
+.link_list_div a{
+    margin-top: 5px;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    color: rgb(50, 155, 56);
+    font-size: 25px;
+}
+
+.link_list_div a:hover{
+    color: orange;
+}
+
+
+.explanation{
+    color: aliceblue;
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+}
+
+.contextual_link{
+    color: aqua;
+}
+
+
+/*Table*/
+
+.table_main_div tr:nth-child(odd){
+    background-color: green;
+}
+
+.table_main_div tr:nth-child(even){
+    background-color: lime;
+}
+
+/*===================================================  FOOTER =================================================== */
+
+.footer_text{
+    font-family: "Montserrat", sans-serif;
+    color: aliceblue;
+    font-size: 20px;
+    margin-left: 100px;
+}
