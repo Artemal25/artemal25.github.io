@@ -8,69 +8,79 @@
 </head>
 
 <body>
-<h1>Работа Поливцева Артёма</h1>
-<ul>
-    <li>
+<header>
+    <div class="header_content">
+        <a href="#"><img src="logo.png" alt="logo.png" class="logo"></a>
+        <nav class="nav_header"><a href="#">Главная</a><a href="#link_list_title">Ссылки</a><a href="#table_main_title">Таблица</a><a href="#form_main_title">Форма</a></nav>
+        <h1 class="text_header_logo"><a href="#">PolivtsevAtrem.org</a></h1>
+    </div>
+</header>
+<main>
+    <p id="link_list_title"></p>
+    <p class="link_list_title">ССЫЛКИ</p>
+    <div class="link_list_div">
+    <ul>
+        <li>
         <a href="http://kubsu.ru">Сайт КубГУ</a>
     </li>
-    <li>
+        <li>
         <a href="https://kubsu.ru/index.php">Сайт КубГУ</a>
     </li>
-    <li>
+        <li>
         <a href="https://kubsu.ru">
         <img alt="Красивая машина" src="beautyCar.jpg"/>
         </a>
     </li>
-    <li>
+        <li>
         <a href="Package/seconPage.html">Сокращённая ссылка на вторую страницу</a>
     </li>
-    <li>
+        <li>
         <a href="mainPage.html">Сокращённая сслыка на главную страницу</a>
     </li>
-    <li>
+        <li>
         <a href="#forma">Сслыка на фрагмент текущей страницы (на форму) </a>
     </li>
-    <li>
+        <li>
         <a href="http://kubsu.ru/ru/taxonomy/term/49?page=10&categoty=post">Ссылка с тремя параметрами</a>
     </li>
-    <li>
+        <li>
         <a href="https://www.kubsu.ru/ru/taxonomy/term/49?id=#zone-footer-wrapper">Ссылка с параметром id</a>
     </li>
-    <li>
+        <li>
         <a href="./mainPage.html">Относительная ссылка на страницу в даннм пакете</a>
     </li>
-    <li>
+        <li>
         <a href="./Package/seconPage.html">Относительная ссылка на страницу в следующем пакете</a>
     </li>
-    <li>
+        <li>
         <a href="./Package/Package2/thiraPage.html">Относительная ссылка на страницу в пакете на 2 пакета выше</a>
     </li>
-    <li>
+        <li>
         <p>Пример использования <a href="http://kubsu.ru">ссылки</a> посреди текста</p>
     </li>
-    <li>
+        <li>
         <a href="https://swiftbook.org/courses/415/show_promo/#">Ссылка на фрагмент сайта swiftbook</a>
     </li>
-    <li>
+        <li>
         <map name="rectangle">
             <area shape="rect" coords="70, 70, 700, 380" href="https://www.kubsu.ru/ru/university/library" alt="Сайт КубГУ, прямоугольник">
             <area shape="circle" coords="360, 750, 220" href="https://kubsu.ru" alt="Сайт КубГУ, круг">
         </map>
         <img src="figuri.jpg" usemap="#rectangle" alt="Картинка с фигурками"/>
     </li>
-    <li>
+        <li>
         <a href>пустая ссылка</a>
     </li>
-    <li class>
+        <li class>
         <a>Ссылка без href</a>
     </li>
-    <li>
+        <li>
         <a href="http://kubsu.ru" rel="nofollow">Запрещённая ссылка для поиска</a>
     </li>
-    <li>
+        <li>
         <a href="http://kubsu.ru" rel="noindex">Запрещённая ссылка для индексации</a>
     </li>
-    <ol>
+        <ol>
        <li>
           <a href="http://kubsu.ru">Это</a>
        </li>
@@ -81,39 +91,104 @@
           <a href="http://kubsu.ru">Университета</a>
        </li>
     </ol>
-    <li>
-    <a href="ftp://user:12345@ftp.sponge.ru">Ссылка на FTP с авторизацией</a>
-    </li>
-</ul>
+        <li>
+        <a href="ftp://user:12345@ftp.sponge.ru">Ссылка на FTP с авторизацией</a>
+        </li>
+    </ul>
+</div>
 
-<h2>Форма для заполнения</h2>
-<form method="post" action="/" id="forma">
-    <label>ФИО</label>
+    <p id="table_main_title"></p>
+    <p class="table_main_title" style="color: white">ТАБЛИЦА</p>
+    <div class="table_main_div">
+        <table>
+            <tr>
+                <th colspan="4">Тип</th>
+                <th>Данные</th>
+                <th>Дата</th>
+                <th>Статус</th>
+                <th>Примечания</th>
+            </tr>
+
+            <tr>
+                <td colspan="4">Физ. Лицо</td>
+                <td>Янковская квения</td>
+                <td>2025-08-17</td>
+                <td>Завершен</td>
+                <td>Нет примечаний</td>
+            </tr>
+
+            <tr>
+                <td colspan="4" >Физ. Лицо</td>
+                <td>Пётр Петрович</td>
+                <td>2025-03-27</td>
+                <td>Активен</td>
+                <td>Нет примечаний</td>
+            </tr>
+
+            <tr>
+                <td colspan="4">Юр. Лицо</td>
+                <td>Иванова Марина</td>
+                <td>2025-04-10</td>
+                <td>В ожидании</td>
+                <td>Важный клиент</td>
+            </tr>
+
+            <tr>
+                <td colspan="4">Юр. Лицо</td>
+                <td>Семёнович Семён</td>
+                <td>2025-09-18</td>
+                <td>В процессе</td>
+                <td>Требуется уточнение</td>
+            </tr>
+
+            <tr>
+                <td colspan="4">Адрес</td>
+                <td>г. Москва</td>
+                <td>2025-09-19</td>
+                <td>Отменен</td>
+                <td>Не актуален</td>
+            </tr>
+
+            <tr>
+                <td colspan="4">Телефон</td>
+                <td>+7 (800) 555-35-35</td>
+                <td>2025-09-20</td>
+                <td>Активен</td>
+                <td>Нет примечаний</td>
+            </tr>
+        </table>
+    </div>
+
+<p id="form_main_title">
+    <p  class="form_main_title" style="color: white">ФОРМА</p>
+        <div class="form_main_div">
+            <form method="post" action="/" id="forma">
+    <label style="color: white">ФИО</label>
     <br>
     <input type="text" name="fieldNameSurname" required>
     <br>
-    <label>Телефон</label>
+    <label style="color: white">Телефон</label>
     <br>
     <input type="tel" name="fieldTelephoneNumber" required>
     <br>
-    <label>Email</label>
+    <label style="color: white">Email</label>
     <br>
     <input type="email" name="fieldEmail" required>
     <br>
-    <label>День рождения</label>
+    <label style="color: white">День рождения</label>
     <br>
     <input type="date" name="fieldDOB" required>
     <br>
-    <label>Ваш пол</label>
+    <label style="color: white">Ваш пол</label>
     <br>
-    <label>
+    <label style="color: white">
         <input type="radio" name="fieldGender" value="Мужской" checked="checked">Мужской
     </label>
-    <label>
+    <label style="color: white">
         <input type="radio" name="fieldGender" value="Женский">Женский
     </label>
     <br>
-    <label>Ваш любимый язык программирования</label>
+    <label style="color: white">Ваш любимый язык программирования</label>
     <br>
     <select multiple="multiple" name="fielpFavotitePL" required>
         <option value="Pascal">Pascal</option>
@@ -129,13 +204,20 @@
         <option value="Scala">Scala</option>
     </select>
     <br>
-    <label>Биография</label>
+    <label style="color: white;">Биография</label>
     <br>
     <textarea name="fieldBiography" required></textarea>
     <br>
+    <span style="color: white">
     <input type="checkbox" name="checkBoxAgree" required>С контрактом ознакомлен(а)
+    </span>
     <br>
     <input type="submit" value="Отправить" required>
 </form>
+</div>
+</main>
+<footer>
+    <span class="footer_text">(c) Поливцев Артём</span></footer>
+</body>
 </body>
 </html>
