@@ -1,222 +1,72 @@
-<!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PolivtsevArtem.org</title>
-    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<header>
     <div>
-    <a href="#"><img src="logo.png" alt="logo.png" class="logo"></a>
+        <label>Введите количество товаров</label>
+        <input type="number" class="input-form" id="quantity" value="1" main="1">
+        <br><br>
+        <label>Выберете товар</label>
+        <select class="custom-select" id="prod">
+            <option value="1">Товар 1 - 100р</option>
+            <option value="2">Товар 2 - 200р</option>
+            <option value="3">Товар 3 - 300р</option>
+            <option value="4">Товар 4 - 400р</option>
+            <option value="5">Товар 5 - 500р</option>
+        </select>
+        <br><br>
+        <label>Сделать рассчёт стоимости всех товаров</label>
+        <button id="priceBtn">Рассчитать</button>
+        <br><br>
+        <div id="result"></div>
     </div>
-    <h1>PolivtsevArtem.org</h1>
-</header>
 
-<nav>
-    <ul>
-        <li><a href="#table">Таблица</a></li>
-        <li><a href="#links">Список гиперссылок</a></li>
-        <li><a href="#form">Форма</a></li>
-    </ul>
-</nav>
+    <script>
+        const quantityInput = document.getElementById('quantity');
+        const prodSelect = document.getElementById('prod');
+        const priceButton = document.getElementById('priceBtn');
+        const resDiv = document.getElementById('result');
 
-<div class="container">
-    <h2>Таблица</h2>
-    <table id="table">
-        <thead>
-        <tr>
-            <th>Тип</th>
-            <th>Данные</th>
-            <th>Дата</th>
-            <th>Статус</th>
-            <th>Примечания</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>Физ. Лицо</td>
-            <td>Мельникова Ксения</td>
-            <td>25-09-20</td>
-            <td>Завершён</td>
-            <td>Нет</td>
-        </tr>
-        <tr>
-            <td>Физ. Лицо</td>
-            <td>Иван Иванов</td>
-            <td>25-09-20</td>
-            <td>Активен</td>
-            <td>Нет</td>
-        </tr>
-            <td>Юр. Лицо</td>
-            <td>ООО "Альфа Строй"</td>
-            <td>25-09-20</td>
-            <td>В ожидании</td>
-            <td>Важный клиент</td>
-        <tr>
-        </tr>
-        <tr>
-            <td>Адрес</td>
-            <td>г.Краснодар</td>
-            <td>25-09-20</td>
-            <td>Отменён</td>
-            <td>Нет</td>
-        </tr>
-        </tbody>
-    </table>
+        function onClick() {
+            const quantity = quantityInput.value;
+            const listProd = prodSelect.value;
+            let price = 0;
 
-    <h2>Список гиперссылок</h2>
-    <ul class="links-list" id="links">
-            <li>
-                <a href="http://kubsu.ru/index.php"> КубГУ</a>
-            </li>
+            switch (listProd) {
+                case '1':
+                    price = 100;
+                    break;
+                case '2':
+                    price = 200;
+                    break;
+                case '3':
+                    price = 300;
+                    break;
+                case '4':
+                    price = 400
+                    break;
+                case '5':
+                    price = 500;
+                    break;
+            }
 
-            <li>
-                <a href="https://kubsu.ru/index.php"> Официальный сайт КубГУ</a>
-            </li>
+            if (quantity <= 0) resDiv.textContent = 'Error: !>0';
+            else {
+                const rez = quantity * price;
+                resDiv.textContent = "Стоимость заказа = " + rez;
+                console.log("Цена: " + price + "\n" + "Количество - " + prodSelect.value + "\n" +
+                    "Стоимость = " + rez);
+            }
+        }
+        window.addEventListener('DOMContentLoaded', function (even){
+            console.log("DOM fully loaded and parsed");
+            priceButton.addEventListener('click', onClick);
+        })
 
-            <li>
-                <a href="http://kubsu.ru/">
-                    <img alt="Красивая машина" src="beautyCar.jpg" id="#Car"></a>
-            </li>
-
-            <li>
-                <a href="Catalog/second-page.html"> Сокращ. ссылка на внутр. страницу сайта</a>
-            </li>
-
-            <li>
-                <a href="./MainPage.html"> Сокращ. ссылка на главную страницу сайта </a>
-            </li>
-
-            <li>
-                <a href="#formList"> Ссылка на фрагмент текущей страницы (на форму для заполнения) </a>
-            </li>
-
-            <li>
-                <a href="https://www.kubsu.ru/ru/taxonomy/term/49?page=1&perpage=10&category=post"> Ссылка с тремя параметрами </a>
-            </li>
-
-            <li>
-                <a href="https://www.kubsu.ru/ru/taxonomy/term/49?id=#zone-footer-wrapper"> Ссылка с параметром: id </a>
-            </li>
-
-            <li>
-                <a href="./MainPage.html"> Относительная сслыка на главную страницу в главном пакете</a>
-            </li>
-
-            <li>
-                <a href="./Catalog/second-page.html"> Относительная ссылка на внутреннюю страницу в каталоге</a>
-            </li>
-
-            <li>
-                <a href="./Catalog/Catalog2/third-page.html"> Относительная ссылка на внутреннюю страницу в каталоге2, где относительная ссылка на страницу в каталоге </a>
-            </li>
-
-            <li>
-                <p>
-                    Пример использования <a href="http://kubsu.ru/index.php"> ссылки</a> посреди текста
-                </p>
-            </li>
-
-            <li>
-                <a href="https://swiftbook.org/courses/415/show_promo/#"> Ссылка на фрагмет сайта с it курсами swiftbook</a>
-            </li>
-
-            <map name="kartinka">
-                <area shape="recet" coords="70,70,700,380" href="https://kubsu.ru" alt="Сайт кубгу, прямоугольник">
-                <area shape="circle" coords="360, 750, 250" href="https://kubsu.ru/index.php" alt="Сайт кубгу, круг">
-                <img src="figuri.jpg"  usemap="#kartinka" alt="Кратинка">
-            </map>
-
-            <li>
-                <a href=""> Пустая ссылка</a>
-            </li>
-
-            <li>
-                <a> Сыллка без href</a>
-            </li>
-
-            <li>
-                <a href="http://kubsu.ru/" rel="nofollow"> Запрещённая для поисковиков ссылка </a>
-            </li>
-
-            <li>
-                <a href="http://kubsu.ru" rel="noindex"> Запрещённая ссылка для индексации </a>
-            </li>
-                <ol>
-                    <li>
-                        <a href="http://kubsu.ru" tite="Вот"> Сайт КубГУ</a>
-                    </li>
-                    <li>
-                        <a href="http://kubsu.ru" tite="Сайт"> Сайт КубГУ</a>
-                    </li>
-                    <li>
-                        <a href="http://kubsu.ru" tite="КубГУ"> Сайт КубГУ</a>
-                    </li>
-                </ol>
-            <li>
-                <a href="ftp://username:password@ftp.example.com/path/to/file.txt">Скачать файл</a>
-            </li>
-    </ul>
-
-    <h2>ФОРМА</h2>
-    <form>
-        <div class="form-group" id="form">
-            <label for="name">ФИО</label>
-            <input type="text" id="name" name="name"  required>
-        </div>
-
-        <div class="form-group">
-            <label>Телефон</label>
-            <input type="tel" id="tel" name="tel"  required>
-        </div>
-
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email"  required>
-        </div>
-
-        <div class="form-group">
-            <label>День роджения</label>
-                <input type="date" name="DOB" required>
-        </div>
-
-        <div class="form-group">
-            <label>Ваш любимый язык программирования</label>
-            <select multiple="multiple" name="fieldFavoriteProgrammingLanguage" required>
-                <option value="Java">Java</option>
-                <option value="PHP">PHP</option>
-                <option value="C++">C++</option>
-                <option value="Python">Python</option>
-                <option value="Ruby">Ruby</option>
-                <option value="C#">C#</option>
-                <option value="C">C</option>
-                <option value="1C">1C</option>
-                <option value="JavaScript">JavaScript</option>
-                <option value="Pascal">Pascal</option>
-                <option value="Haskel">Haskel</option>
-                <option value="Prolog">Prolog</option>
-                <option value="Scala">Scala</option>
-                <option value="Clojure">Clojure</option>
-            </select>
-        </div>
-
-        <div class="form-group">
-            <label>Биография:</label>
-            <textarea name="biography" required></textarea>
-        </div>
-
-        <label for="myself" class="checkbox-label"/>С контрактом ознакомлен(a)
-        <input type="checkbox" name="myself" id="myself" required>
-        <br>
-        <button type="submit">Отправить</button>
-    </form>
-</div>
-
-<footer>
-    <p>(c) Поливцев Артём</p>
-</footer>
+    </script>
 </body>
 </html>
-
